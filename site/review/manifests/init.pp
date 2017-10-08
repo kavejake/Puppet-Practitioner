@@ -1,5 +1,7 @@
 class review {
  String $user = 'review',
+}
+{
 
 include review::motd 
 
@@ -20,7 +22,7 @@ include review::motd
     owner  => $user,
     group  => $user,
     mode   => '0644',
-    source => 'puppet:///modules/review/bashrc'
+    source => 'puppet:///modules/review/bashrc',
   }
 
   service { 'puppet':
