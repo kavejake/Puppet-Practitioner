@@ -8,7 +8,8 @@ class review {
     'root'  => '/root',
     default => "/home/${user}",
   }
-
+ include review::motd
+ 
   user { $user:
     ensure     => present,
     shell      => '/bin/bash',
