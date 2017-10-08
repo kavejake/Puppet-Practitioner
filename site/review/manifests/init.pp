@@ -1,26 +1,26 @@
-class review {
- String $user = 'review',
+class review (
+  String $user = 'review',
+) {
 
-include review::motd 
+  include review::motd
 
   $homedir = $user ? {
     'root'  => '/root',
     default => "/home/${user}",
   }
- 
- 
+
   user { $user:
     ensure     => present,
     shell      => '/bin/bash',
     managehome => true,
   }
 
-  file { '/${homedir}/.bashrc':
+  file { "${homedir}/.bashrc":
     ensure => file,
     owner  => $user,
     group  => $user,
     mode   => '0644',
-    source => 'puppet:///modules/review/bashrc',
+    source => 'puppet:///modules/review/bashrc'
   }
 
   service { 'puppet':
@@ -29,3 +29,4 @@ include review::motd
   }
 
 }
+
