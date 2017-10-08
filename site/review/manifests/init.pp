@@ -1,5 +1,5 @@
 class review {
- String $user = 'review'.
+ String $user = 'review',
 # this class should accept a parameter rather than having
   # the username hardcoded.
 
