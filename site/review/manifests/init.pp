@@ -3,12 +3,9 @@ class review {
  
  }
  {
-# this class should accept a parameter rather than having
-  # the username hardcoded.
 
 include review::motd 
 
-  # Uncomment and use this variable where appropriate
   $homedir = $user ? {
     'root'  => '/root',
     default => "/home/${user}",
@@ -33,8 +30,5 @@ include review::motd
     ensure => 'stopped',
     enable => 'false',
   }
-
-  # add the proper resource to ensure that the Puppet agent is not running
-  # in the background. How would you discover the service name?
 
 }
