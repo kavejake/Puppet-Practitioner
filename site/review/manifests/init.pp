@@ -1,6 +1,7 @@
-    class review (
+   class review (
       String $user = 'review',
-    ) {
+    ) 
+    {
 
       include review::motd
 
@@ -28,5 +29,5 @@
         enable => 'false',
       }
 
-    }
+}    
 
