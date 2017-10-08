@@ -1,7 +1,5 @@
 class review {
  String $user = 'review',
-}
-{
 
 include review::motd 
 
