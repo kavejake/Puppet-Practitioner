@@ -9,5 +9,6 @@ class ordering::mysql {
     perl_enable => true,
   }
 
-
+  contain mysql::server
+  contain mysql::bindings
 }
