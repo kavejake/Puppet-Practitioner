@@ -1,1 +1,4 @@
-This machine is managed with Puppet.
+
+    This machine is managed with Puppet.
+    Welcome message: You've arrived to <%= $facts['fqdn'] %>
+    I've been up for <%= $facts['uptime'] %>, yawn!
